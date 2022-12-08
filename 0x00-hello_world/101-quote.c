@@ -13,7 +13,7 @@ int main(void)
 	int i, s;
 
 	s = strlen(str);
-	for(i = 0; i < s; i++)
+	for (i = 0; i < s; i++)
 	{
 		putchar(str[i]);
 	}
