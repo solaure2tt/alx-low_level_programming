@@ -10,10 +10,10 @@
 int main(void)
 {
 	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-	int i,s;
+	int i, s;
 
 	s = strlen(str);
-	for(i=0;i<s;i++)
+	for(i = 0; i < s; i++)
 	{
 		putchar(str[i]);
 	}
