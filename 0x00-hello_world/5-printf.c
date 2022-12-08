@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* this program print a text on screen by using the function printf */
+/**
+ * main - print with proper grammar, but the outcome is a piece of art
+ * Description: print a text in the output screen
+ * Return: 0
+ */
 
 int main()
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return 0;
+	return (0);
 }
