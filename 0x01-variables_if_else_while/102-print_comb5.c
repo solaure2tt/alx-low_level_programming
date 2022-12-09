@@ -24,6 +24,8 @@ int main(void)
 						l++;
 					while ((i == k) && (l <= j))
 						l++;
+					while (k <= i)
+						k++;
 					putchar('0' + i);
 					putchar('0' + j);
 					putchar(' ');
