@@ -18,14 +18,14 @@ int main(void)
 				j++;
 			for (k = 0; k < 10; k++)
 			{
+				while ((k <= i) && (k < j))
+					k++;
 				for (l = 0; l < 10; l++)
 				{
 					if ((i == 0) && (j == 0) && (k == 0) && (l == 0))
 						l++;
-					while ((i == k) && (l <= j))
+					while ((i == k) && (l < j))
 						l++;
-					while (k <= i)
-						k++;
 					putchar('0' + i);
 					putchar('0' + j);
 					putchar(' ');
