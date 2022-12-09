@@ -19,11 +19,8 @@ int main(void)
 			putchar('0' + j);
 			if ((i == 8) && (j == 9))
 				break;
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 			j++;
 		}
 	}
