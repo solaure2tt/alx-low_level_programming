@@ -20,7 +20,7 @@ int main(void)
 			{
 				for (l = 0; l < 10; l++)
 				{
-					if((i == 0) && (j == 0))
+					if ((i == 0) && (j == 0) && (k == 0))
 						l++;
 					putchar('0' + i);
 					putchar('0' + j);
