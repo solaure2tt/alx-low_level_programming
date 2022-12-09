@@ -18,9 +18,10 @@ int main(void)
 				j++;
 			for (k = 0; k < 10; k++)
 			{
-				while ((k <= i) && (k < j))
+				l = 0;
+				while ((k <= i) && (l < j))
 					k++;
-				for (l = 0; l < 10; l++)
+				while (l < 10)
 				{
 					if ((i == 0) && (j == 0) && (k == 0) && (l == 0))
 						l++;
@@ -35,6 +36,7 @@ int main(void)
 						break;
 					putchar(',');
 					putchar(' ');
+					l++;
 				}
 			}
 		}
