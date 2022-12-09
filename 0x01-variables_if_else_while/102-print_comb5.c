@@ -19,7 +19,7 @@ int main(void)
 			for (k = 0; k < 10; k++)
 			{
 				l = 0;
-				while ((k <= i) && (l < j))
+				while ((k <= i) && (l <= j))
 					l++;
 				while (l < 10)
 				{
