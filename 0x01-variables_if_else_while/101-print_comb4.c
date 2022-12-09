@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - prints all possible different combinations of three digits
- * Description: The three digits must be different and Numbers must be separated
- * Return: 0
+ * Description: The three digits must be different and Numbers must be separ
+ *Return: 0
  */
 
 int main(void)
@@ -16,15 +16,15 @@ int main(void)
 		{
 			k = j + 1;
          		while (k < 10)
-	        	{
-	        		putchar('0' + i);
-	         		putchar('0' + j);
+			{
+				putchar('0' + i);
+				putchar('0' + j);
 				putchar('0' + k);
-		        	if ((i == 7) && (j == 8) && (k == 9))
-		        		break;
-		        	putchar(',');
-		        	putchar(' ');
-		        	k++;
+				if ((i == 7) && (j == 8) && (k == 9))
+					break;
+				putchar(',');
+				putchar(' ');
+				k++;
 			}
 		}
 	}
