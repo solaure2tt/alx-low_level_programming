@@ -16,6 +16,11 @@ int main(void)
 		{
 			for (k = 0; k < 10; k++)
 			{
+				if (i != 0)
+				{
+					while (k <= j)
+						k++;
+				}
 				l = 0;
 				while ((k <= i) && (l <= j))
 					l++;
