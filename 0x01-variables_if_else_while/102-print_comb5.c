@@ -12,10 +12,8 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = i; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
-			while (j < i)
-				j++;
 			for (k = 0; k < 10; k++)
 			{
 				l = 0;
@@ -23,16 +21,12 @@ int main(void)
 					l++;
 				while (l < 10)
 				{
-					if ((i == 0) && (j == 0) && (k == 0) && (l == 0))
-						l++;
-					while ((k <= i) && (l < j))
-						l++;
 					putchar('0' + i);
 					putchar('0' + j);
 					putchar(' ');
 					putchar('0' + k);
 					putchar('0' + l);
-					if ((i == 9) && (j == 9) && (k == 8) && (l == 9))
+					if ((i == 9) && (j == 8) && (k == 9) && (l == 9))
 						break;
 					putchar(',');
 					putchar(' ');
