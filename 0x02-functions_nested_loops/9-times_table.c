@@ -24,7 +24,7 @@ void times_table(void)
 				last = res % 10;
 				_putchar(' ');
 				_putchar('0' + first);
-				_putchar('0' + last);			
+				_putchar('0' + last);
 			}
 			else
 			{
