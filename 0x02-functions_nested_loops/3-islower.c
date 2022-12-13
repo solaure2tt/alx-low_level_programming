@@ -13,5 +13,7 @@ int _islower(int c)
 
 	if ((c <= 97) && (c >= 122))
 		r = 1;
+	if ((c >= 'a') && (c <= 'z'))
+		r = 1;
 	return (r);
 }
