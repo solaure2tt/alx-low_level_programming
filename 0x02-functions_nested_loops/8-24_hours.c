@@ -7,9 +7,15 @@
  */
 void jack_bauer(void)
 {
-	int i, j, k, l;
+	int i, j, k, l, max;
+
 	for (i = 0; i < 3; i++)
-		for (j = 0; j < 4; j++)
+	{
+		if ( i == 2)
+			max = 4;
+		else
+			max = 10;
+		for (j = 0; j < max; j++)
 		{
 			for (k = 0; k < 6; k++)
 			{
