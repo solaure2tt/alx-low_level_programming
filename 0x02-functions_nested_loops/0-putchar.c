@@ -1,7 +1,7 @@
-#include "_putchar.h"
+#include "main.h"
 
 /**
- * 0-putchar.c - writes _putchar in stdout
+ * main - writes _putchar in stdout
  * Description: writes _putchar in stdout buy usig functions
  * Return: 0
  */
