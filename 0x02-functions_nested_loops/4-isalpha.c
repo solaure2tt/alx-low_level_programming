@@ -19,5 +19,5 @@ int _isalpha(int c)
 		res = 1;
 	if ((c >= 'A') && (c <= 'Z'))
 		res = 1;
-	return (res)
+	return (res);
 }
