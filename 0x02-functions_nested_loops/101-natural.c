@@ -11,6 +11,6 @@ int main(void)
 	int r;
 
 	r = summultiple();
-	printf("%d\n", res);
+	printf("%d\n", r);
 	return (r);
 }
