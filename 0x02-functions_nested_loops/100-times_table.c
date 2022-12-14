@@ -3,14 +3,15 @@
 /**
  * printR - time table multiplication
  * Description: function that prints the n times table, starting with 0
- * @n: number in entry
+ * @res: number in entry
+ * @i: second param
  * Return: numbers
  *
  */
 void printR(int res, int i)
 {
 	int first, last, middle;
-	
+
 				if (res > 9)
 				{
 					_putchar(' ');
@@ -47,6 +48,7 @@ void printR(int res, int i)
 /**
  * print_times_table - time table multiplication
  * Description: nnn
+ * @n: param
  * Return: no
  */
 void print_times_table(int n)
