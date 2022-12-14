@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - entry
  * Description:  program that computes and prints the sum of all the multiple
  * Return: number
@@ -16,5 +16,5 @@ int main(void)
 			res = res + i;
 	}
 	printf("%d\n", res);
-	return (res);
+	return (0);
 }
