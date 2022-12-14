@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	long int i = 1, j = 2;
+	double i = 1, j = 2;
 	int nb;
 	double n = (double)i + (double)j;
 
-	printf("%lu, ", i);
-	printf("%lu, ", j);
+	printf("%.0lf, ", i);
+	printf("%.0lf, ", j);
 
 	for (nb = 3; nb <= 98; nb++)
 	{
 		if (nb == 98)
-			printf("%llu\n", (long long)n);
+			printf("%.0lf\n", n);
 		else
-			printf("%llu, ", (long long)n);
+			printf("%.0lf, ", n);
 		i = j;
 		j = n;
 		n = i + j;
