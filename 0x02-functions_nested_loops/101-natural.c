@@ -1,16 +1,19 @@
 #include <stdio.h>
-#include "main.h"
 
 /*
  * main - entry
- * Description: sum of multiple of 3 or 5
- * Return : number
+ * Description:  program that computes and prints the sum of all the multiple
+ * Return: number
  */
 int main(void)
 {
-	int r;
+	int res = 0;
 
-	r = summultiple();
-	printf("%d\n", r);
-	return (r);
+	for (i = 0; i < 1024; i++)
+	{
+		if (((i % 3) == 0) || ((i % 5) == 0))
+			res = res + i;
+	}
+	printf("%d\n", res);
+	return (res);
 }
