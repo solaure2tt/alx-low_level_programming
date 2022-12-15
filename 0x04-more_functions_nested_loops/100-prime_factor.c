@@ -23,7 +23,7 @@ int main(void)
 			if (n == 1)
 			{
 				res = max;
-				printf("%lu \n", res);
+				printf("%lu\n", res);
 				break;
 			}
 		}
