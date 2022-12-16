@@ -8,25 +8,14 @@
  */
 void print_number(int n)
 {
-	int rev;
-
-	rev = 0;
 	if (n < 0)
+	{
 		_putchar('-');
-	while (n / 10)
-	{
-		rev = rev * 10 + n % 10;
-		n = n/ 10;
+		n = -n;
 	}
-	if (rev < 0)
-	{
-		rev = rev * (-1);
-		n = n * (-1);
-	}
-	_putchar(n + '0');
-	while (rev)
-	{
-		_putchar(rev % 10 + '0');
-		rev = rev / 10;
-	}
+	if (n == 0)
+		_putchar('0');
+	if (n / 10)
+		print_number(n / 10);
+	_putchar(n % 10 + '0');
 }
