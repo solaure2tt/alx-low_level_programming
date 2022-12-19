@@ -30,8 +30,9 @@ int _strlen(char *s)
 void print_array(int *a, int n)
 {
 	int i;
+	int siz = _strlen(a);
 
-	if (n > 0)
+	if (n > 0 && n <= siz)
 	{
 		for (i = 0; i < n; i++)
 		{
