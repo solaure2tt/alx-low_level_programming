@@ -8,19 +8,20 @@
  */
 int _atoi(char *s)
 {
-	int j, i = 0;
+	int i = 0;
 	int res = 0;
 	char bef;
+	int countneg = 0;
 
 	if (s[i] != '\0')
 	{
 		bef = s[i];
-		j = i;
 		while (!(bef >= '0' && bef <= '9'))
 		{
+			if (s[i] == '-')
+				countneg++;
 			if (s[i + 1] != '\0')
 			{
-				j = i;
 				i++;
 				bef = s[i];
 			}
@@ -40,7 +41,7 @@ int _atoi(char *s)
 			}
 			i++;
 		}
-		if (s[j] == '-')
+		if (countneg % 2 != 0)
 			res = (-1) * res;
 	}
 	return (res);
