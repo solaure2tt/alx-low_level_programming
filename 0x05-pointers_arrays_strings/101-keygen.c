@@ -17,7 +17,7 @@ void randomPassword(int n)
 	char lettersUpper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char numbers[] = "0123456789";
 	char symb[] = "!@#$^&*?";
-	char pwd[n];
+	char pwd[100];
 
 	srand((unsigned int)(time(NULL)));
 	test = rand() % 4;
