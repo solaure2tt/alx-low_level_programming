@@ -8,8 +8,8 @@
  */
 int _atoi(char *s)
 {
-	int i = 0;
-	int res = 0;
+	int r, i = 0;
+	unsigned int res = 0;
 	char bef;
 	int countneg = 0;
 
@@ -42,7 +42,9 @@ int _atoi(char *s)
 			i++;
 		}
 		if (countneg % 2 != 0)
-			res = (-1) * res;
+			r = -(res);
+		else
+			r = (int)res;
 	}
-	return (res);
+	return (r);
 }
