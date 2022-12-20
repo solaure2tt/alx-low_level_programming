@@ -23,19 +23,19 @@ void randomPassword(int n)
 	test = rand() % 4;
 	for (i = 0; i < n; i++)
 	{
-		if (test == 1)
+		if (test == 0)
 		{
 			pwd[i] = numbers[rand() % 10];
 			test = rand() % 4;
 			printf("%c", pwd[i]);
 		}
-		else if (test == 2)
+		else if (test == 1)
 		{
 			pwd[i] = symb[rand() % 8];
 			test = rand() % 4;
 			printf("%c", pwd[i]);
 		}
-		else if (test == 3)
+		else if (test == 2)
 		{
 			pwd[i] = lettersUpper[rand() % 26];
 			test = rand() % 4;
