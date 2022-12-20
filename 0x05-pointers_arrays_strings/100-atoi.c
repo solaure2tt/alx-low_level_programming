@@ -13,6 +13,7 @@ int _atoi(char *s)
 	char bef;
 	int countneg = 0;
 
+	r = 0;
 	if (s[i] != '\0')
 	{
 		bef = s[i];
