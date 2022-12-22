@@ -8,13 +8,16 @@
  */
 void print_number(int n)
 {
+	unsigned int res;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		res = -n;
 	}
-	if (n / 10)
-		print_number(n / 10);
-	_putchar(n % 10 + '0');
+	else
+		res = n;
+	if (res / 10)
+		print_number(res / 10);
+	_putchar(res % 10 + '0');
 }
