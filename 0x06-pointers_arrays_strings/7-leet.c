@@ -14,7 +14,7 @@ char *leet(char *s)
 
 	while (s[i] != '\0')
 	{
-		for (j = 0; j < 9; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			if (s[i] == letters[j])
 				s[i] = code[j];
