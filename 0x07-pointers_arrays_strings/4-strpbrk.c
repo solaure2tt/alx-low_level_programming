@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * searchchar - search a character
@@ -34,7 +35,7 @@ int searchchar(char *s, char c)
 char *_strpbrk(char *s, char *accept)
 {
 
-	char *p;
+	char *p = NULL;
 
 	while (*s != '\0')
 	{
