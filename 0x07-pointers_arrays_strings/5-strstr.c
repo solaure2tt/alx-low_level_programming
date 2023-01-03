@@ -39,7 +39,7 @@ char *_strstr(char *haystack, char *needle)
 	char *res = NULL;
 	char *n = needle;
 
-	while ((haystack != NULL) && (*haystack != '\0'))
+	while ((haystack != NULL) && (needle != NULL) && (*haystack != '\0'))
 	{
 		if (*haystack == *needle)
 		{
