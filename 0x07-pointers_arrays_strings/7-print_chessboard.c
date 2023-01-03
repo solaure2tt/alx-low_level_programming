@@ -16,6 +16,7 @@ void print_chessboard(char (*a)[8])
 	while (a[i][j] != '\0')
 	{
 		hascontent = 0;
+		j = 0;
 		while (j < 8)
 		{
 			if (a[i][j] >= 'a' && a[i][j] <= 'z')
@@ -32,10 +33,10 @@ void print_chessboard(char (*a)[8])
 			{
 				_putchar(' ');
 				hascontent = 1;
+				break;
 			}
 			j++;
 		}
-		j = 0;
 		i++;
 		if (hascontent == 1)
 			_putchar('\n');
