@@ -36,10 +36,10 @@ char *_strstr(char *haystack, char *needle)
 {
 
 	char *p;
-	char *res = "NULL";
+	char *res = NULL;
 	char *n = needle;
 
-	while (*haystack != '\0')
+	while ((haystack != NULL) && (*haystack != '\0'))
 	{
 		if (*haystack == *needle)
 		{
