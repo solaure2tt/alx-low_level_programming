@@ -39,28 +39,33 @@ char *_strstr(char *haystack, char *needle)
 	char *res = NULL;
 	char *n = needle;
 
-	while ((haystack != NULL) && (needle != NULL) && (*haystack != '\0'))
+	if (*needle == '\0')
+		res = haystack;
+	else
 	{
-		if (*haystack == *needle)
+		while ((haystack != NULL) && (needle != NULL) && (*haystack != '\0'))
 		{
-			p = haystack;
-			haystack++;
-			needle++;
-			while ((*needle != '\0') && (*haystack == *needle))
+			if (*haystack == *needle)
 			{
-				needle++;
+				p = haystack;
 				haystack++;
-			}
-			if (*needle == '\0')
-			{
-				res = p;
-				break;
+				needle++;
+				while ((*needle != '\0') && (*haystack == *needle))
+				{
+					needle++;
+					haystack++;
+				}
+				if (*needle == '\0')
+				{
+					res = p;
+					break;
+				}
+				else
+					needle = n;
 			}
 			else
-				needle = n;
+				haystack++;
 		}
-		else
-			haystack++;
 	}
 	return (res);
 }
