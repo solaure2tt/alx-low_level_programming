@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * searchchar - search a character
@@ -35,7 +36,7 @@ char *_strstr(char *haystack, char *needle)
 {
 
 	char *p;
-	char *res;
+	char *res = NULL;
 	char *n = needle;
 
 	while (*haystack != '\0')
