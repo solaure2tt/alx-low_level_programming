@@ -5,8 +5,9 @@
  * Description: calculate teh square root of a number
  * @x: parameter 1
  * @y: parameter 2
+ * Return: number
  */
-int _sqrt(int x, int y)
+int _sqrt(unsigned int x, unsigned int y)
 {
 	if (y == 1)
 		return (-1);
@@ -27,5 +28,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 1)
 		return (1);
-	return (_sqrt(n, n / 2));
+	return (_sqrt((unsigned int)n, (unsigned int)(n / 2)));
 }
