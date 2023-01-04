@@ -39,7 +39,7 @@ int is_palindrome(char *s)
 {
 	int size = length(s);
 
-	if(size == 0)
+	if (size == 0)
 		return (0);
 	return (palindrome(s, 0, size - 1));
 }
