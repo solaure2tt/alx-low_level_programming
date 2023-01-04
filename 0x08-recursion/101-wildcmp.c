@@ -16,6 +16,8 @@ int cmp1(char *s1, char *s2, int i, int j)
 		return (0);
 	if ((s1[i + 1] == '\0') && (s2[j] == '\0'))
 		return (1);
+	if (s1[i + 1] == '*')
+		return (cmp1(s1, s2, i + 1, j));
 	if (s1[i + 1] == s2[j])
 		return (cmp(s1, s2, i + 1, j));
 	return (cmp1(s1, s2, i, j + 1));
@@ -37,6 +39,8 @@ int cmp2(char *s1, char *s2, int i, int j)
 		return (0);
 	if ((s1[i] == '\0') && (s2[j + 1] == '\0'))
 		return (1);
+	if (s2[j + 1] == '*')
+		return (cmp2(s1, s2, i, j + 1));
 	if (s1[i] == s2[j + 1])
 		return (cmp(s1, s2, i, j + 1));
 	return (cmp2(s1, s2, i + 1, j));
@@ -57,9 +61,17 @@ int cmp(char *s1, char *s2, int i, int j)
 	if (s1[i] == s2[j])
 		return (cmp(s1, s2, i + 1, j + 1));
 	if (s1[i] == '*')
+	{
+		if (s1[i + 1] == '\0')
+			return (1);
 		return (cmp1(s1, s2, i, j + 1));
+	}
 	if (s2[j] == '*')
+	{
+		if (s2[j + 1] == '\0')
+			return (1);
 		return (cmp2(s1, s2, i + 1, j));
+	}
 	return (0);
 }
 
