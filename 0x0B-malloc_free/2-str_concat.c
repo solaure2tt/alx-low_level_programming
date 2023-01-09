@@ -29,13 +29,15 @@ char *str_concat(char *s1, char *s2)
 	char *res;
 	int size, i = 0;
 
+	if (s1 == NULL && s2 == NULL)
+	{
+		res = "\0";
+	}
 	if (s1 == NULL)
 		s1 = "\0";
 	if (s2 == NULL)
 		s2 = "\0";
 	size = length(s1) + length(s2);
-	if (size == 0)
-		return (NULL);
 	res = malloc(sizeof(char) * size + 1);
 	if (res == NULL)
 		return (NULL);
