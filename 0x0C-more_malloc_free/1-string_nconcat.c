@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *res, *tmp;
 	unsigned int i = 0;
-	int size = _strlen(s1) + 1 + n;
+	int size;
 
 	if (s1 ==  NULL)
 		s1 = "\0";
@@ -41,10 +41,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = '\0';
 	if (n == 0)
 		return (s1);
+	size = _strlen(s1) + 1 + n;
 	res = malloc(sizeof(char) * size);
 	if (res == NULL)
 		return (NULL);
 	tmp = res;
+	if (_strlen(s1) == 0 && s2 == NULL)
+	{
+		*tmp = *s1;
+		return (tmp);
+	}
+	if (_strlen(s2) == 0 && s1 == NULL)
+	{
+		*tmp = *s2;
+		return (tmp);
+	}
 	while (*s1 != '\0')
 	{
 		*res = *s1;
