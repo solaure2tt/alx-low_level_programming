@@ -120,6 +120,11 @@ int main(int ac, char **av)
 	char *res;
 	int size;
 
+	if (ac == 2)
+	{
+		print("Error\n");
+		exit(98);
+	}
 	if (ac < 3)
 	{
 		print("Error\n");
@@ -135,7 +140,7 @@ int main(int ac, char **av)
 	else
 	{
 		size = (_strlen(av[1]) + _strlen(av[2])) * sizeof(char);
-		res = malloc(size);
+		res = malloc(size + 1);
 		if (res == NULL)
 			return (0);
 		memset(res, '0', size);
