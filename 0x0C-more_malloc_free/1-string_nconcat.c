@@ -21,6 +21,7 @@ int _strlen(char *s)
 	}
 	return (res);
 }
+
 /**
  * string_nconcat - entry
  * Description: function that concatenates two strings.
@@ -35,39 +36,38 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0;
 	int size;
 
-	if (s1 ==  NULL)
-		s1 = "\0";
-	if (s2 == NULL)
-		s2 = '\0';
-	if (n == 0)
-		return (s1);
-	size = _strlen(s1) + 1 + n;
+	if (s1 ==  NULL && s2 == NULL)
+	{
+		res = malloc(sizeof(char));
+		*res = '\0';
+		return (res);
+	}
+	if (s1 == NULL && s2 != NULL)
+		size = n + 1;
+	else
+		size = _strlen(s1) + 1 + n;
 	res = malloc(sizeof(char) * size);
 	if (res == NULL)
 		return (NULL);
 	tmp = res;
-	if (_strlen(s1) == 0 && s2 == NULL)
+	if (s1 != NULL)
 	{
-		*tmp = *s1;
-		return (tmp);
+		while (*s1 != '\0')
+		{
+			*res = *s1;
+			res++;
+			s1++;
+		}
 	}
-	if (_strlen(s2) == 0 && s1 == NULL)
+	if (s2 != NULL)
 	{
-		*tmp = *s2;
-		return (tmp);
-	}
-	while (*s1 != '\0')
-	{
-		*res = *s1;
-		res++;
-		s1++;
-	}
-	while ((i < n) && (*s2 != '\0'))
-	{
-		*res = *s2;
-		res++;
-		s2++;
-		i++;
+		while ((i < n) && (*s2 != '\0'))
+		{
+			*res = *s2;
+			res++;
+			s2++;
+			i++;
+		}
 	}
 	*res = '\0';
 	return (tmp);
