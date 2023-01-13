@@ -40,7 +40,7 @@ int _isdigit(char c)
 	return (r);
 }
 /**
- * isnumber: test a number
+ * isnumber - test a number
  * Description: verifiy is a parameter is a numbe
  * @n: parameter 1
  * Return: number
@@ -125,7 +125,7 @@ int main(int ac, char **av)
 		print("Error\n");
 		exit(98);
 	}
-	if (ac < 3)
+	if (ac != 3)
 	{
 		print("Error\n");
 		exit(98);
