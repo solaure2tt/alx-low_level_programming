@@ -16,7 +16,7 @@ int _putchar(char c)
  * Description: program that prints the name of the file it was compiled from
  * Return: 0 success 1 no success
  */
-int main(void)
+int main()
 {
 	char *file = __FILE__;
 
