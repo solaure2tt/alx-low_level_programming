@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 /**
- * print_strings - prints parameters
+ * print_all - prints parameters
  * Description:  function that prints anything.
  * @format: parameter 1
  * Return: nothing
@@ -16,6 +16,7 @@ void print_all(const char * const format, ...)
 	const char * const f = format;
 	char c;
 	int i, ignore;
+	char *s;
 
 	if (format != NULL)
 	{
@@ -36,7 +37,11 @@ void print_all(const char * const format, ...)
 					printf("%f", (float)va_arg(args, double));
 					break;
 				case 's':
-					printf("%s", va_arg(args, char*));
+					s = va_arg(args, char*);
+					if (s == NULL)
+						printf("(nil)");
+					else
+						printf("%s", s);
 					break;
 				default:
 					ignore = 1;
