@@ -18,11 +18,9 @@ void print_all(const char * const format, ...)
 	int i, ignore;
 	char *s;
 
-	if (format != NULL)
-	{
 		i = 0;
 		va_start(args, format);
-		while (f[i] != '\0')
+		while ((format != NULL) && (f[i] != '\0'))
 		{
 			c = f[i];
 			switch (c)
@@ -53,5 +51,4 @@ void print_all(const char * const format, ...)
 		}
 		va_end(args);
 		printf("\n");
-	}
 }
