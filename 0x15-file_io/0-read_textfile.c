@@ -22,14 +22,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	if (fd < 0)
 		return (0);
 	resr = read(fd, buf, letters);
-	if (resr == -1)
+	if (resr < 0)
 		return (0);
 	resw = write(STDOUT_FILENO, buf, resr);
 	if (resw < resr)
 		return (0);
+	close (fd);
 	return (resw);
 
 }
