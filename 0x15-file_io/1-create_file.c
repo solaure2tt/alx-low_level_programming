@@ -24,10 +24,11 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY);
 	if (fd < 0)
 	{
-		fd = open(filename, O_WRONLY | S_IRUSR, S_IWUSR);
+		fd = open(filename, O_WRONLY | O_CREAT, S_IRUSR, S_IWUSR);
 	}
 	else
 	{
+		close (fd);
 		fd = open(filename, O_WRONLY | O_TRUNC);
 	}
 	if (fd == -1)
