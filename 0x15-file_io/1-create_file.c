@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	else
 	{
-		close (fd);
+		close(fd);
 		fd = open(filename, O_WRONLY | O_TRUNC);
 	}
 	if (fd == -1)
@@ -39,7 +39,7 @@ int create_file(const char *filename, char *text_content)
 		if (resw < (ssize_t)strlen(text_content))
 			return (-1);
 	}
-	close (fd);
+	close(fd);
 	return (1);
 
 }
